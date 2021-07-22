@@ -1,0 +1,592 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Pressure controller"
+Date "2021-07-22"
+Rev ""
+Comp ""
+Comment1 "Simple pressure gauge controller"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Module:Arduino_UNO_R2 A1
+U 1 1 60F9514B
+P 9250 4550
+F 0 "A1" H 9250 5731 50  0000 C CNN
+F 1 "Arduino_UNO_R2" H 9050 5650 50  0000 C CNN
+F 2 "Module:Arduino_UNO_R2" H 9250 4550 50  0001 C CIN
+F 3 "https://www.arduino.cc/en/Main/arduinoBoardUno" H 9250 4550 50  0001 C CNN
+	1    9250 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Display_Character:ELD-426SYGWA U3
+U 1 1 60F99456
+P 5400 1850
+F 0 "U3" H 5400 2517 50  0000 C CNN
+F 1 "ELD-426SYGWA" H 5400 2426 50  0000 C CNN
+F 2 "Display_7Segment:ELD_426XXXX" H 5390 1170 50  0001 C CNN
+F 3 "http://www.everlight.com/file/ProductFile/D426SYGWA-S530-E2.pdf" H 5145 2030 50  0001 C CNN
+	1    5400 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Display_Character:ELD-426SYGWA U4
+U 1 1 60F9A61E
+P 7700 1850
+F 0 "U4" H 7700 2517 50  0000 C CNN
+F 1 "ELD-426SYGWA" H 7700 2426 50  0000 C CNN
+F 2 "Display_7Segment:ELD_426XXXX" H 7690 1170 50  0001 C CNN
+F 3 "http://www.everlight.com/file/ProductFile/D426SYGWA-S530-E2.pdf" H 7445 2030 50  0001 C CNN
+	1    7700 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 60F9E230
+P 10300 4750
+F 0 "R2" H 10370 4796 50  0000 L CNN
+F 1 "10k" H 10370 4705 50  0000 L CNN
+F 2 "" V 10230 4750 50  0001 C CNN
+F 3 "~" H 10300 4750 50  0001 C CNN
+	1    10300 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 60F9E682
+P 10300 4350
+F 0 "R1" H 10370 4396 50  0000 L CNN
+F 1 "10k" H 10370 4305 50  0000 L CNN
+F 2 "" V 10230 4350 50  0001 C CNN
+F 3 "~" H 10300 4350 50  0001 C CNN
+	1    10300 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 60F9EDB4
+P 6350 3750
+F 0 "R3" H 6420 3796 50  0000 L CNN
+F 1 "33K" H 6420 3705 50  0000 L CNN
+F 2 "" V 6280 3750 50  0001 C CNN
+F 3 "~" H 6350 3750 50  0001 C CNN
+	1    6350 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Display_Character:ELD-426SYGWA U1
+U 1 1 60F9859C
+P 3300 1850
+F 0 "U1" H 3300 2517 50  0000 C CNN
+F 1 "ELD-426SYGWA" H 3300 2426 50  0000 C CNN
+F 2 "Display_7Segment:ELD_426XXXX" H 3290 1170 50  0001 C CNN
+F 3 "http://www.everlight.com/file/ProductFile/D426SYGWA-S530-E2.pdf" H 3045 2030 50  0001 C CNN
+	1    3300 1850
+	1    0    0    -1  
+$EndComp
+Text GLabel 2550 1650 0    50   Input ~ 0
+B
+Text GLabel 2550 1750 0    50   Input ~ 0
+C
+Text GLabel 2550 1850 0    50   Input ~ 0
+D
+Text GLabel 2550 1950 0    50   Input ~ 0
+E
+Text GLabel 2550 2050 0    50   Input ~ 0
+F
+Text GLabel 2550 2150 0    50   Input ~ 0
+G
+Text GLabel 2550 2250 0    50   Input ~ 0
+DP
+Text GLabel 2550 1550 0    50   Input ~ 0
+A
+Text GLabel 4650 1650 0    50   Input ~ 0
+B
+Text GLabel 4650 1750 0    50   Input ~ 0
+C
+Text GLabel 4650 1850 0    50   Input ~ 0
+D
+Text GLabel 4650 1950 0    50   Input ~ 0
+E
+Text GLabel 4650 2050 0    50   Input ~ 0
+F
+Text GLabel 4650 2150 0    50   Input ~ 0
+G
+Text GLabel 4650 2250 0    50   Input ~ 0
+DP
+Text GLabel 4650 1550 0    50   Input ~ 0
+A
+Text GLabel 6950 1650 0    50   Input ~ 0
+B
+Text GLabel 6950 1750 0    50   Input ~ 0
+C
+Text GLabel 6950 1850 0    50   Input ~ 0
+D
+Text GLabel 6950 1950 0    50   Input ~ 0
+E
+Text GLabel 6950 2050 0    50   Input ~ 0
+F
+Text GLabel 6950 2150 0    50   Input ~ 0
+G
+Text GLabel 6950 2250 0    50   Input ~ 0
+DP
+Text GLabel 6950 1550 0    50   Input ~ 0
+A
+Wire Wire Line
+	4650 1550 4900 1550
+Wire Wire Line
+	4900 1650 4650 1650
+Wire Wire Line
+	4650 1750 4900 1750
+Wire Wire Line
+	4900 1850 4650 1850
+Wire Wire Line
+	4650 1950 4900 1950
+Wire Wire Line
+	4900 2050 4650 2050
+Wire Wire Line
+	4650 2150 4900 2150
+Wire Wire Line
+	4900 2250 4650 2250
+Wire Wire Line
+	2800 1550 2550 1550
+Wire Wire Line
+	2550 1650 2800 1650
+Wire Wire Line
+	2550 1750 2800 1750
+Wire Wire Line
+	2550 1850 2800 1850
+Wire Wire Line
+	2800 1950 2550 1950
+Wire Wire Line
+	2550 2050 2800 2050
+Wire Wire Line
+	2550 2250 2800 2250
+Wire Wire Line
+	2550 2150 2800 2150
+Wire Wire Line
+	6950 1550 7200 1550
+Wire Wire Line
+	7200 1650 6950 1650
+Wire Wire Line
+	6950 1750 7200 1750
+Wire Wire Line
+	6950 1950 7200 1950
+Wire Wire Line
+	6950 1850 7200 1850
+Wire Wire Line
+	7200 2050 6950 2050
+Wire Wire Line
+	6950 2150 7200 2150
+Wire Wire Line
+	7200 2250 6950 2250
+Text GLabel 4000 2150 2    50   Input ~ 0
+D0
+Text GLabel 4000 2250 2    50   Input ~ 0
+D1
+Text GLabel 6050 2150 2    50   Input ~ 0
+D2
+Text GLabel 6050 2250 2    50   Input ~ 0
+D3
+Text GLabel 8400 2150 2    50   Input ~ 0
+D4
+Text GLabel 8400 2250 2    50   Input ~ 0
+D5
+Wire Wire Line
+	8400 2150 8200 2150
+Wire Wire Line
+	8200 2250 8400 2250
+Wire Wire Line
+	5900 2150 6050 2150
+Wire Wire Line
+	6050 2250 5900 2250
+Wire Wire Line
+	4000 2150 3800 2150
+Wire Wire Line
+	3800 2250 4000 2250
+Text GLabel 5050 3850 0    50   Input ~ 0
+A
+Text GLabel 5050 3950 0    50   Input ~ 0
+B
+Text GLabel 5050 4050 0    50   Input ~ 0
+C
+Text GLabel 5050 4150 0    50   Input ~ 0
+D
+Text GLabel 5050 4250 0    50   Input ~ 0
+E
+Text GLabel 5050 4350 0    50   Input ~ 0
+F
+Text GLabel 5050 4450 0    50   Input ~ 0
+G
+Text GLabel 5050 4550 0    50   Input ~ 0
+DP
+Text GLabel 5050 4650 0    50   Input ~ 0
+D0
+Text GLabel 5050 4750 0    50   Input ~ 0
+D1
+Text GLabel 5050 4850 0    50   Input ~ 0
+D2
+Text GLabel 5050 4950 0    50   Input ~ 0
+D3
+Text GLabel 5050 5050 0    50   Input ~ 0
+D4
+Text GLabel 5050 5150 0    50   Input ~ 0
+D5
+Wire Wire Line
+	5050 3850 5250 3850
+Wire Wire Line
+	5250 3950 5050 3950
+Wire Wire Line
+	5050 4050 5250 4050
+Wire Wire Line
+	5250 4150 5050 4150
+Wire Wire Line
+	5050 4250 5250 4250
+Wire Wire Line
+	5250 4350 5050 4350
+Wire Wire Line
+	5050 4450 5250 4450
+Wire Wire Line
+	5250 4550 5050 4550
+Wire Wire Line
+	5050 4650 5250 4650
+Wire Wire Line
+	5250 4750 5050 4750
+Wire Wire Line
+	5250 4850 5050 4850
+Wire Wire Line
+	5050 4950 5250 4950
+Wire Wire Line
+	5050 5050 5250 5050
+Wire Wire Line
+	5250 5150 5050 5150
+Text GLabel 6300 5450 2    50   Input ~ 0
+DIN
+Text GLabel 6300 5350 2    50   Input ~ 0
+CLK
+Text GLabel 6300 5250 2    50   Input ~ 0
+LOAD
+Wire Wire Line
+	6050 5250 6300 5250
+Wire Wire Line
+	6300 5350 6050 5350
+Wire Wire Line
+	6050 5450 6300 5450
+$Comp
+L Device:C C3
+U 1 1 61006E41
+P 6750 3750
+F 0 "C3" H 6865 3796 50  0000 L CNN
+F 1 "0.1u" H 6865 3705 50  0000 L CNN
+F 2 "" H 6788 3600 50  0001 C CNN
+F 3 "~" H 6750 3750 50  0001 C CNN
+	1    6750 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Driver_LED:MAX7219 U5
+U 1 1 60F968DD
+P 5650 4650
+F 0 "U5" H 5850 5850 50  0000 C CNN
+F 1 "MAX7219" H 5850 5750 50  0000 C CNN
+F 2 "" H 5600 4700 50  0001 C CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/MAX7219-MAX7221.pdf" H 5700 4500 50  0001 C CNN
+	1    5650 4650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR09
+U 1 1 61016506
+P 5650 5700
+F 0 "#PWR09" H 5650 5450 50  0001 C CNN
+F 1 "GNDREF" H 5655 5527 50  0000 C CNN
+F 2 "" H 5650 5700 50  0001 C CNN
+F 3 "" H 5650 5700 50  0001 C CNN
+	1    5650 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR011
+U 1 1 61017B40
+P 6750 4000
+F 0 "#PWR011" H 6750 3750 50  0001 C CNN
+F 1 "GNDREF" H 6755 3827 50  0000 C CNN
+F 2 "" H 6750 4000 50  0001 C CNN
+F 3 "" H 6750 4000 50  0001 C CNN
+	1    6750 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR08
+U 1 1 610190AE
+P 5650 3550
+F 0 "#PWR08" H 5650 3400 50  0001 C CNN
+F 1 "+5V" H 5665 3723 50  0000 C CNN
+F 2 "" H 5650 3550 50  0001 C CNN
+F 3 "" H 5650 3550 50  0001 C CNN
+	1    5650 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR010
+U 1 1 61019D30
+P 6550 3500
+F 0 "#PWR010" H 6550 3350 50  0001 C CNN
+F 1 "+5V" H 6565 3673 50  0000 C CNN
+F 2 "" H 6550 3500 50  0001 C CNN
+F 3 "" H 6550 3500 50  0001 C CNN
+	1    6550 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 3650 5650 3550
+Wire Wire Line
+	6050 3850 6100 3850
+Wire Wire Line
+	6100 3850 6100 3950
+Wire Wire Line
+	6100 3950 6350 3950
+Wire Wire Line
+	6350 3950 6350 3900
+Wire Wire Line
+	6350 3600 6350 3550
+Wire Wire Line
+	6350 3550 6550 3550
+Wire Wire Line
+	6550 3550 6550 3500
+Wire Wire Line
+	6550 3550 6750 3550
+Wire Wire Line
+	6750 3550 6750 3600
+Connection ~ 6550 3550
+Wire Wire Line
+	6750 3900 6750 4000
+Wire Wire Line
+	5650 5700 5650 5650
+$Comp
+L power:+5V #PWR06
+U 1 1 61029896
+P 9450 3300
+F 0 "#PWR06" H 9450 3150 50  0001 C CNN
+F 1 "+5V" H 9465 3473 50  0000 C CNN
+F 2 "" H 9450 3300 50  0001 C CNN
+F 3 "" H 9450 3300 50  0001 C CNN
+	1    9450 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR05
+U 1 1 61029FF4
+P 9150 5800
+F 0 "#PWR05" H 9150 5550 50  0001 C CNN
+F 1 "GNDREF" H 9155 5627 50  0000 C CNN
+F 2 "" H 9150 5800 50  0001 C CNN
+F 3 "" H 9150 5800 50  0001 C CNN
+	1    9150 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 5800 9150 5700
+Wire Wire Line
+	9150 5700 9250 5700
+Wire Wire Line
+	9250 5700 9250 5650
+Connection ~ 9150 5700
+Wire Wire Line
+	9150 5700 9150 5650
+Wire Wire Line
+	9250 5700 9350 5700
+Wire Wire Line
+	9350 5700 9350 5650
+Connection ~ 9250 5700
+Wire Wire Line
+	9450 3550 9450 3300
+$Comp
+L power:GNDREF #PWR07
+U 1 1 610341FA
+P 10300 5050
+F 0 "#PWR07" H 10300 4800 50  0001 C CNN
+F 1 "GNDREF" H 10305 4877 50  0000 C CNN
+F 2 "" H 10300 5050 50  0001 C CNN
+F 3 "" H 10300 5050 50  0001 C CNN
+	1    10300 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10300 5050 10300 4900
+$Comp
+L Connector:Jack-DC J2
+U 1 1 61039BAE
+P 1400 5700
+F 0 "J2" H 1457 6025 50  0000 C CNN
+F 1 "Power jack (15 - 24V)" H 1457 5934 50  0000 C CNN
+F 2 "" H 1450 5660 50  0001 C CNN
+F 3 "~" H 1450 5660 50  0001 C CNN
+	1    1400 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x06_Female J1
+U 1 1 6103DD6F
+P 1350 3800
+F 0 "J1" H 1242 3275 50  0000 C CNN
+F 1 "Pressure gauge" H 1242 3366 50  0000 C CNN
+F 2 "" H 1350 3800 50  0001 C CNN
+F 3 "~" H 1350 3800 50  0001 C CNN
+	1    1350 3800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1550 3600 1900 3600
+Wire Wire Line
+	1900 3600 1900 3800
+Wire Wire Line
+	1900 3800 1550 3800
+$Comp
+L power:GNDREF #PWR01
+U 1 1 610412ED
+P 1900 4100
+F 0 "#PWR01" H 1900 3850 50  0001 C CNN
+F 1 "GNDREF" H 1905 3927 50  0000 C CNN
+F 2 "" H 1900 4100 50  0001 C CNN
+F 3 "" H 1900 4100 50  0001 C CNN
+	1    1900 4100
+	1    0    0    -1  
+$EndComp
+Connection ~ 1900 3800
+Wire Wire Line
+	1900 3800 1900 4100
+Wire Wire Line
+	1700 5600 2350 5600
+Wire Wire Line
+	2350 5600 2350 3700
+Wire Wire Line
+	2350 3700 1550 3700
+$Comp
+L power:GNDREF #PWR02
+U 1 1 61048338
+P 1950 6000
+F 0 "#PWR02" H 1950 5750 50  0001 C CNN
+F 1 "GNDREF" H 1955 5827 50  0000 C CNN
+F 2 "" H 1950 6000 50  0001 C CNN
+F 3 "" H 1950 6000 50  0001 C CNN
+	1    1950 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 5800 1950 5800
+Wire Wire Line
+	1950 5800 1950 6000
+Text GLabel 2450 3900 2    50   Input ~ 0
+SIGNAL
+Wire Wire Line
+	1550 3900 2450 3900
+Text GLabel 10550 4050 2    50   Input ~ 0
+SIGNAL
+Wire Wire Line
+	10550 4050 10300 4050
+Wire Wire Line
+	10300 4050 10300 4200
+Wire Wire Line
+	10300 4600 10300 4550
+Wire Wire Line
+	9750 4550 10300 4550
+Connection ~ 10300 4550
+Wire Wire Line
+	10300 4550 10300 4500
+Text GLabel 8350 5150 0    50   Input ~ 0
+LOAD
+Text GLabel 8350 5050 0    50   Input ~ 0
+CLK
+Text GLabel 8350 4950 0    50   Input ~ 0
+DIN
+Wire Wire Line
+	8750 4950 8350 4950
+Wire Wire Line
+	8350 5050 8750 5050
+Wire Wire Line
+	8750 5150 8350 5150
+$Comp
+L Regulator_Linear:L7805 U2
+U 1 1 6106E74F
+P 3400 5600
+F 0 "U2" H 3400 5842 50  0000 C CNN
+F 1 "L7805" H 3400 5751 50  0000 C CNN
+F 2 "" H 3425 5450 50  0001 L CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 3400 5550 50  0001 C CNN
+	1    3400 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 61071C3E
+P 2750 5750
+F 0 "C1" H 2865 5796 50  0000 L CNN
+F 1 "10u" H 2865 5705 50  0000 L CNN
+F 2 "" H 2788 5600 50  0001 C CNN
+F 3 "~" H 2750 5750 50  0001 C CNN
+	1    2750 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 61073BC6
+P 4100 5750
+F 0 "C2" H 4215 5796 50  0000 L CNN
+F 1 "0.1u" H 4215 5705 50  0000 L CNN
+F 2 "" H 4138 5600 50  0001 C CNN
+F 3 "~" H 4100 5750 50  0001 C CNN
+	1    4100 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 5600 2750 5600
+Connection ~ 2350 5600
+Wire Wire Line
+	2750 5600 3100 5600
+Connection ~ 2750 5600
+Wire Wire Line
+	3700 5600 4100 5600
+Wire Wire Line
+	4100 5900 4100 6000
+Wire Wire Line
+	4100 6000 3400 6000
+Wire Wire Line
+	3400 6000 3400 5900
+Wire Wire Line
+	2750 5900 2750 6000
+Wire Wire Line
+	2750 6000 3400 6000
+Connection ~ 3400 6000
+$Comp
+L power:GNDREF #PWR03
+U 1 1 610828ED
+P 3400 6100
+F 0 "#PWR03" H 3400 5850 50  0001 C CNN
+F 1 "GNDREF" H 3405 5927 50  0000 C CNN
+F 2 "" H 3400 6100 50  0001 C CNN
+F 3 "" H 3400 6100 50  0001 C CNN
+	1    3400 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR04
+U 1 1 61082F38
+P 4100 5500
+F 0 "#PWR04" H 4100 5350 50  0001 C CNN
+F 1 "+5V" H 4115 5673 50  0000 C CNN
+F 2 "" H 4100 5500 50  0001 C CNN
+F 3 "" H 4100 5500 50  0001 C CNN
+	1    4100 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 5600 4100 5500
+Connection ~ 4100 5600
+$EndSCHEMATC
